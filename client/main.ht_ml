@@ -1,0 +1,35 @@
+<head>
+  <title>Book Exchange Network</title>
+</head>
+<body>
+  <div class="container">
+  </div>
+  <nav class="clearfix white bg-black">
+  <div class="sm-col">
+    <a href="/" class="btn py2">Home</a>
+    <a href="/" class="btn py2">Burgers</a>
+    <a href="/" class="btn py2">Fries</a>
+  </div>
+  <div class="sm-col-right">
+    <a href="/" class="btn py2">About</a>
+  </div>
+</nav>
+<div id="main">
+  {{> postsList}}
+</div>
+</body>
+<head>
+  <title>Microscope</title>
+</head>
+<body>
+  <div class="container">
+    <header class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Microscope</a>
+      </div>
+    </header>
+    <div id="main">
+      {{> postsList}}
+    </div>
+  </div>
+</body>
