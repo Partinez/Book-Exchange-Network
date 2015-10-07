@@ -1,7 +1,16 @@
 <template name="postsList">
-  <div class="posts">
-    {{#each posts}}
-      {{> postItem}}
-    {{/each}}
+  <div>
+    <table class="ui celled padded table">
+      <thead>
+        <tr>
+          <th>Title</th><th>Author</th><th>User</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each posts}}
+          {{> postItem}}
+        {{/each}}
+      </tbody>
+    </table>
   </div>
 </template>

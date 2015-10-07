@@ -1,7 +1,13 @@
 <template name="postItem">
-  <div class="post">
-    <div class="post-content border-bottom mt1">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
-    </div>
-  </div>
+  <tr class="">
+    <td>
+      <a href="#!" class="">{{title}}</a>
+    </td>
+    <td>
+      <a href="#!" class="">{{domain}}</a>
+    </td>
+    <td>
+      <a href="{{pathFor 'postPage'}}" class="btn btn-primary bg-gray">More info</a>
+    </td>
+  </tr>
 </template>

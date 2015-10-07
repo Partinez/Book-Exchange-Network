@@ -1,0 +1,32 @@
+<template name="newPostModal">
+  <a class="item openModal" ><i class="book icon"></i>Add book</a>
+  <div class="ui modal" id="modalView">
+    <i class="close icon"></i>
+    <div class="header">
+      Submit a book
+    </div>
+    <div class="image content">
+      <div class="description">
+        <form class="ui form">
+          <div class="field">
+            <label>Title</label>
+            <input name="title" placeholder="Title" type="text">
+          </div>
+          <div class="field">
+            <label>Author</label>
+            <input name="author" placeholder="Author" type="text">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="ui black deny button">
+        Cancel
+      </div>
+      <div class="ui positive right labeled icon button">
+        Submit
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+</template>
