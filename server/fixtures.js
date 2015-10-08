@@ -1,16 +1,22 @@
 if (Posts.find().count() === 0) {
   Posts.insert({
-    title: 'Introducing Telescope',
-    url: 'http://sachagreif.com/introducing-telescope/'
+    title: 'Farenheit 451',
+    author: 'Ray Bradbury',
+    comments: 'I really liked this book!',
+    userName: 'IsaacNewton'
   });
 
   Posts.insert({
-    title: 'Meteor',
-    url: 'http://meteor.com'
+    title: "Ender's Game",
+    author: 'Orson Scott Card',
+    comments: 'Good condition',
+    userName: 'JonDoe'
   });
 
   Posts.insert({
-    title: 'The Meteor Book',
-    url: 'http://themeteorbook.com'
+    title: 'Discovering Meteor',
+    author: 'Tom Coleman & Sacha Greif',
+    comments: '',
+    userName: 'Boredkid'
   });
 }

@@ -1,5 +1,22 @@
 <template name="postPage">
-  <div class="post-page page">
-    {{> postItem}}
+  <div class="ui items">
+    <div class="item">
+      <div class="image">
+        <i class="massive book icon"></i>
+        <!--<img src="/images/wireframe/image.png">-->
+      </div>
+      <div class="content">
+        <a class="header">Title: {{title}}</a>
+        <div class="meta">
+          <span>Author: {{author}}</span>
+        </div>
+        <div class="description">
+          <p>Comments: {{comments}}</p>
+        </div>
+        <div class="extra">
+          <p>User: {{userName}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>

@@ -1,13 +1,16 @@
 <template name="postItem">
   <tr class="">
     <td>
-      <a href="#!" class="">{{title}}</a>
+      <a href="{{pathFor 'postPage'}}" class="">{{title}}</a>
     </td>
     <td>
-      <a href="#!" class="">{{domain}}</a>
+      {{author}}
     </td>
     <td>
-      <a href="{{pathFor 'postPage'}}" class="btn btn-primary bg-gray">More info</a>
+      {{comments}}
+    </td>
+    <td>
+      <a href="#!" class="">{{userName}}</a>
     </td>
   </tr>
 </template>

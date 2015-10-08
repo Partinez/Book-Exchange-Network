@@ -1,14 +1,32 @@
 Template.newPostModal.events({
   'click .openModal': function() {
-    $('#modalView')
+    $('#newPostModal')
       .modal({
         onDeny    : function(){
-          console.log('canceled')
-          return false;
+          //Clear the form:
+          $('[name=title]').val('');
+          $('[name=author]').val('');
+          $('[name=comments]').val('');
+          return "hide";
         },
         onApprove : function() {
-          var modalInputValue = $('#modalInputValue').val();
-          Session.set("formValue", modalInputValue);
+          var post = {
+            title: $('[name=title]').val(),
+            author: $('[name=author]').val(),
+            comments: $('[name=comments]').val()
+          };
+          //Clear the form:
+          $('[name=title]').val('');
+          $('[name=author]').val('');
+          $('[name=comments]').val('');
+
+          Meteor.call('postInsert', post, function(error, result) {
+            //display error
+            if (error) {
+              return alert(error.reason);
+            }
+            Router.go('postPage', {_id: result._id});
+          });
         }
       })
       .modal('show')

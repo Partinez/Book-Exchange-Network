@@ -1,6 +1,6 @@
 <template name="newPostModal">
   <a class="item openModal" ><i class="book icon"></i>Add book</a>
-  <div class="ui modal" id="modalView">
+  <div class="ui modal" id="newPostModal">
     <i class="close icon"></i>
     <div class="header">
       Submit a book
@@ -10,11 +10,15 @@
         <form class="ui form">
           <div class="field">
             <label>Title</label>
-            <input name="title" placeholder="Title" type="text">
+            <input name="title" placeholder="The title of the book" type="text">
           </div>
           <div class="field">
             <label>Author</label>
             <input name="author" placeholder="Author" type="text">
+          </div>
+          <div class="field">
+            <label>Comments</label>
+            <input name="comments" placeholder="Condition, opinion about the book..." type="text">
           </div>
         </form>
       </div>
@@ -23,7 +27,7 @@
       <div class="ui black deny button">
         Cancel
       </div>
-      <div class="ui positive right labeled icon button">
+      <div type="submit" value="Submit" class="ui positive right labeled icon button submitform">
         Submit
         <i class="checkmark icon"></i>
       </div>

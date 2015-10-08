@@ -1,7 +1,7 @@
 <template name="header">
   <nav class="ui menu container">
     <a href="{{pathFor 'postsList'}}" class="header item">Home</a>
-    {{> newPostModal}}
+    {{#if currentUser}}{{> newPostModal}}{{/if}}
     <div class="right menu">
       <div class="item">
         <div class="ui action left icon input">
@@ -9,7 +9,8 @@
           <button class="ui button"><i class="search icon"></i></button>
         </div>
       </div>
-      {{> loginButtons align="right"}}
+      {{> atNavButton}}
+      {{> loginModal}}
     </div>
   </nav>
 </template>
