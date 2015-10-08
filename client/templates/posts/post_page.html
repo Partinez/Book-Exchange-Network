@@ -6,15 +6,19 @@
         <!--<img src="/images/wireframe/image.png">-->
       </div>
       <div class="content">
-        <a class="header">Title: {{title}}</a>
+        <a class="header">{{title}}</a>
         <div class="meta">
-          <span>Author: {{author}}</span>
+          <span>{{author}}{{debug}}</span>
         </div>
         <div class="description">
-          <p>Comments: {{comments}}</p>
+          <p>{{comments}}</p>
         </div>
         <div class="extra">
-          <p>User: {{userName}}</p>
+          <div class="ui right floated primary button">
+            Request book
+            <i class="right chevron icon"></i>
+          </div>
+          <div class="ui label">{{username}}</div>
         </div>
       </div>
     </div>

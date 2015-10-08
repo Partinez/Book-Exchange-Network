@@ -1,0 +1,33 @@
+<template name="userPage">
+  <div class="ui stackable grid">
+    <div class="six wide column">
+      <div class="ui card">
+        <div class="image">
+          <img src="/images/user.jpg">
+        </div>
+        <div class="content">
+          <a class="header">{{profile.name}}</a>
+          <div class="meta">
+            <span class="date">Joined in 2013</span>
+          </div>
+          <div class="description">
+            {{profile.name}} is an art director living in New York.
+          </div>
+        </div>
+        <div class="extra content">
+          <a>
+            <i class="user icon"></i>
+            22 Friends
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ten wide column">
+      <div class="ui three stackable cards">
+        {{#each userPosts}}
+          {{> userPost}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,22 @@
+<template name="userPost">
+  <div class="card">
+    <div class="image">
+      <img>
+    </div>
+    <div class="content">
+      <div class="header">
+        <a href="{{pathFor 'postPage' _id=this._id}}">{{title}}</a>
+      </div>
+      <div class="meta">
+        {{author}}
+      </div>
+      <div class="description">
+        {{comments}}
+      </div>
+    </div>
+    <div class="extra">
+      Rating:
+      <div class="ui star rating" data-rating="2"></div>
+    </div>
+  </div>
+</template>
