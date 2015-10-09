@@ -1,0 +1,20 @@
+<template name="postEdit">
+  <form class="ui form">
+    <div class="field">
+      <label>Title</label>
+      <input name="title" placeholder="The title of the book" type="text"
+      value="{{title}}">
+    </div>
+    <div class="field">
+      <label>Author</label>
+      <input name="author" placeholder="Author" type="text" value="{{author}}">
+    </div>
+    <div class="field">
+      <label>Comments</label>
+      <input name="comments" placeholder="Condition, opinion about the book..."
+      type="text" value={{comments}}>
+    </div>
+    <button class="ui button" type="submit">Submit</button>
+    <a class="ui right floated red button delete" href="!#">Delete book</a>
+  </form>
+</template>

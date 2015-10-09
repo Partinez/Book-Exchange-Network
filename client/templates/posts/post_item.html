@@ -11,6 +11,7 @@
     </td>
     <td>
       <a href="{{pathFor 'userPage' name=this.username}}" class="">{{username}}</a>
+      {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" class="ui right floated button">Edit</a>{{/if}}
     </td>
   </tr>
 </template>

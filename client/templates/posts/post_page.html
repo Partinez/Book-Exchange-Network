@@ -7,11 +7,13 @@
       </div>
       <div class="content">
         <a class="header">{{title}}</a>
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" class="ui right floated button">Edit</a>{{/if}}
         <div class="meta">
-          <span>{{author}}{{debug}}</span>
+          <span>{{author}}</span>
         </div>
         <div class="description">
           <p>{{comments}}</p>
+
         </div>
         <div class="extra">
           <div class="ui right floated primary button">
