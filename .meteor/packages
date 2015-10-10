@@ -20,10 +20,9 @@ underscore
 iron:router
 sacha:spin
 flemay:less-autoprefixer
-semantic:ui-data
-semantic:ui-css
-useraccounts:semantic-ui
-accounts-password
 useraccounts:iron-routing
 force-ssl
 check
+materialize:materialize@=0.97.0
+useraccounts:materialize
+accounts-password

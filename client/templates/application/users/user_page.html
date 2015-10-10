@@ -1,31 +1,26 @@
 <template name="userPage">
-  <div class="ui stackable grid">
-    <div class="six wide column">
-      <div class="ui card">
-        <div class="image">
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
           <img src="/images/user.jpg">
+          <span class="card-title">{{username}}</span>
         </div>
-        <div class="content">
-          <a class="header">{{profile.name}}</a>
-          <div class="meta">
-            <span class="date">Joined in 2013</span>
-          </div>
-          <div class="description">
-            {{profile.name}} is an art director living in New York.
-          </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
         </div>
-        <div class="extra content">
-          <a>
-            <i class="user icon"></i>
-            22 Friends
-          </a>
+        <div class="card-action">
+          <a href="#">This is a link</a>
         </div>
       </div>
     </div>
-    <div class="ten wide column">
-      <div class="ui three stackable cards">
+    <div class="col s12 m8">
+      <div class="row">
         {{#each userPosts}}
-          {{> userPost}}
+          <div class="col s12 l6">
+            {{>postCard}}
+          </div>
         {{/each}}
       </div>
     </div>

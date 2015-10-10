@@ -1,16 +1,10 @@
 <template name="postsList">
+  <h2>Available books</h2>
   <div>
-    <table class="ui celled padded table unstackable">
-      <thead>
-        <tr>
-          <th>Title</th><th>Author</th><th>Comments</th><th>User</th>
-        </tr>
-      </thead>
-      <tbody>
+    <ul class="collection">
         {{#each posts}}
           {{> postItem}}
         {{/each}}
-      </tbody>
-    </table>
+    </ul>
   </div>
 </template>

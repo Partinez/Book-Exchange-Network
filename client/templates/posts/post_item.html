@@ -1,17 +1,12 @@
 <template name="postItem">
-  <tr class="">
-    <td>
-      <a href="{{pathFor 'postPage'}}" class="">{{title}}</a>
-    </td>
-    <td>
-      {{author}}
-    </td>
-    <td>
-      {{comments}}
-    </td>
-    <td>
-      <a href="{{pathFor 'userPage' name=this.username}}" class="">{{username}}</a>
-      {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" class="ui right floated button">Edit</a>{{/if}}
-    </td>
-  </tr>
+  <a class="collection-item avatar" href="{{pathFor 'postPage'}}">
+    <i class="material-icons circle light-blue lighten-1">book</i>
+    <span class="title grey-text text-darken-4">{{title}}</span>
+    <p class="grey-text">{{author}} <br>
+       <a href="{{pathFor 'userPage' name=this.username}}" class="">{{username}}</a>
+       {{#if comments}} - {{comments}}{{/if}}
+    </p>
+    {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" class="secondary-content light-blue-text text-lighten-1">
+      <i class="material-icons">description</i></a>{{/if}}
+  </a>
 </template>

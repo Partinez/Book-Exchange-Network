@@ -1,20 +1,27 @@
 <template name="postEdit">
-  <form class="ui form">
-    <div class="field">
-      <label>Title</label>
-      <input name="title" placeholder="The title of the book" type="text"
-      value="{{title}}">
+  <h2>Edit post</h2>
+  <div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <input value="{{title}}" id="title" type="text" class="validate">
+        <label for="title" class="active">Title</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="author" value="{{author}}" type="text" class="validate">
+        <label for="author" class="active">Author</label>
+      </div>
     </div>
-    <div class="field">
-      <label>Author</label>
-      <input name="author" placeholder="Author" type="text" value="{{author}}">
+    <div class="row">
+      <div class="input-field col s12">
+        <input value="{{comments}}" id="comments" type="text" class="validate">
+        <label for="comments" class="active">Comments</label>
+      </div>
     </div>
-    <div class="field">
-      <label>Comments</label>
-      <input name="comments" placeholder="Condition, opinion about the book..."
-      type="text" value={{comments}}>
+    <div class="row">
+      <button class="waves-effect waves-light btn" type="submit">Submit</button>
+      <a class="waves-effect waves-light btn red floated right" href="!#">Delete book</a>
     </div>
-    <button class="ui button" type="submit">Submit</button>
-    <a class="ui right floated red button delete" href="!#">Delete book</a>
   </form>
+</div>
 </template>

@@ -1,28 +1,7 @@
 <template name="postPage">
-  <div class="ui items">
-    <div class="item">
-      <div class="image">
-        <i class="massive book icon"></i>
-        <!--<img src="/images/wireframe/image.png">-->
-      </div>
-      <div class="content">
-        <a class="header">{{title}}</a>
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}" class="ui right floated button">Edit</a>{{/if}}
-        <div class="meta">
-          <span>{{author}}</span>
-        </div>
-        <div class="description">
-          <p>{{comments}}</p>
-
-        </div>
-        <div class="extra">
-          <div class="ui right floated primary button">
-            Request book
-            <i class="right chevron icon"></i>
-          </div>
-          <div class="ui label">{{username}}</div>
-        </div>
-      </div>
+  <div class="row">
+    <div class="col s12 m6 offset-m3">
+      {{> postCard}}
     </div>
   </div>
 </template>
