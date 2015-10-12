@@ -1,21 +1,21 @@
 <template name="postSubmit">
   <h2>New post</h2>
   <div class="row">
-    <form class="col s12">
+    <form class="col s12" id="form">
       <div class="row">
         <div class="input-field col s6">
-          <input id="title" type="text" class="validate" name="title">
-          <label for="title" class="">Title</label>
+          <input id="title" type="text" class="validate" name="title" >
+          <label id="title-l" for="title" class="" style="width:100%" >Title</label>
         </div>
         <div class="input-field col s6">
           <input id="author" type="text" class="validate" name="author">
-          <label for="author" class="">Author</label>
+          <label id="author-l" for="author" class="" style="width:100%" >Author</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <input id="comments" type="text" class="validate" name="comments">
-          <label for="comments" class="">Comments</label>
+          <label id="comments-l" for="comments" class="">Comments</label>
         </div>
       </div>
       <div class="row">

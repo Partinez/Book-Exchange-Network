@@ -29,12 +29,27 @@ if (Posts.find().count() === 0) {
     submitted: new Date(now - 3 * 3600 * 1000)
   });
 
-  Posts.insert({
+  var discovering = Posts.insert({
     title: 'Discovering Meteor',
     author: 'Tom Coleman & Sacha Greif',
     comments: '',
     username: tom.profile.name,
     userId: tom._id,
     submitted: new Date(now - 10 * 3600 * 1000)
+  });
+  var request = {
+    user:sacha.profile.name,
+    status: 'accepted',
+    messages: {
+
+    },
+  }
+  var postProperties = _.extend(Posts.findOne(discovering._id), request);
+  Posts.update(discovering._id, {$set: postProperties}, function(error) {
+    if (error) {
+      // display the error to the user
+      console.log(error.reason);
+      alert(error.reason);
+    }
   });
 }

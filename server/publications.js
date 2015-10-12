@@ -4,3 +4,7 @@ Meteor.publish('posts', function() {
 Meteor.publish('users', function(username) {
   return Meteor.users.find({'profile.name' : username},{profile:1});
 })
+
+Meteor.publish('requests', function(post){
+  return Requests.find({'post': post});
+})
