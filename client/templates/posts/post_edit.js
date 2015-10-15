@@ -10,6 +10,23 @@ Template.postEdit.events({
       comments: $(e.target).find('[name=comments]').val().trim(),
     }
 
+    var errors = validatePost(postProperties);
+    if ( errors.title || errors.author) {
+      if (errors.title) {
+        $('#title-l').attr('data-error','The title field is required');
+        $('#title-l').addClass('active');
+        $('#title').addClass('invalid');
+      }
+      if (errors.author) {
+        $('#author-l').attr('data-error','The author field is required');
+        $('#author-l').addClass('active');
+        $('#author').addClass('invalid');
+      }
+      return
+    }
+
+
+
     Posts.update(currentPostId, {$set: postProperties}, function(error) {
       if (error) {
         // display the error to the user

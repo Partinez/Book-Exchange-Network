@@ -4,17 +4,17 @@
   <form class="col s12">
     <div class="row">
       <div class="input-field col s6">
-        <input value="{{title}}" id="title" type="text" class="validate">
-        <label for="title" class="active">Title</label>
+        <input value="{{title}}" id="title" type="text" class="validate" name="title">
+        <label id="title-l" for="title" class="active" style="width:100%">Title</label>
       </div>
       <div class="input-field col s6">
-        <input id="author" value="{{author}}" type="text" class="validate">
-        <label for="author" class="active">Author</label>
+        <input id="author" value="{{author}}" type="text" class="validate" name="author">
+        <label id="author-l" for="author" class="active" style="width:100%">Author</label>
       </div>
     </div>
     <div class="row">
       <div class="input-field col s12">
-        <input value="{{comments}}" id="comments" type="text" class="validate">
+        <input value="{{comments}}" id="comments" type="text" class="validate" name="comments">
         <label for="comments" class="active">Comments</label>
       </div>
     </div>
